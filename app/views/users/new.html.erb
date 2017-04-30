@@ -1,0 +1,13 @@
+
+
+  <title>Детали профиля</title>
+ </head>
+ <body>
+
+ <h1>Я нью</h1>
+<%= form_for User.new do |f| %>
+<%= f.text_field :name %>
+<%= f.text_field :family %>
+<%= f.submit "Окай" %>
+<% end %>
+ </body>
