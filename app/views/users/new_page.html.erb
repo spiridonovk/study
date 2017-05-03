@@ -3,9 +3,14 @@
   <title>Детали профиля</title>
  </head>
  <body>
-<%= @a %>
-<%= @b %>
- <h1>приветик</h1>
-
-       </  body>
+я
+ <%= form_for @user, :html => {:multipart => true} do |f| %>   
+  <p>
+    <label>My Avatar</label>
+    <%= image_tag(@user.avatar_url) if @user.avatar? %> #загруженая картинка, если присутствует
+    <%= f.file_field :avatar %>
+    <%= f.hidden_field :avatar_cache %> #кешированое изображение
+	<%= f.submit  "Создать"%>
+  <% end %>
+  </  body>
 

@@ -1,0 +1,15 @@
+
+
+  <title>Детали профиля</title>
+ </head>
+ <body>
+
+ <h1>Edit</h1>
+
+
+<%= form_for @user do |f| %>
+<p><%= f.text_field :name %>
+<p><%= f.text_field :family %>
+<p><%= f.submit %>
+<% end %>
+ </body>

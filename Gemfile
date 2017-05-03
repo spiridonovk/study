@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.4.0'
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
@@ -36,7 +36,7 @@ gem 'simple_form'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'carrierwave', '~> 1.0'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
@@ -53,3 +53,8 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+ # gem 'pg', '0.15.1'
+group :production do
+
+#  gem 'rails_12factor', '0.0.2'
+end

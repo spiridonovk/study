@@ -9,9 +9,9 @@
     <li> ID ----<%= @user[:id] %>  </li>
     <li>Имя ----<%= @user[:name] %> </li>
     <li>Фамилия ----<%= @user[:family] %></li>
-
-
+    <li>Фото <%=@user[:avatar]%></li>
+		<%= image_tag(@user.avatar_url.to_s) %>
 </ul>   
-    	<a class="btn btn-success" href="http://localhost:3000/list" role="button">Вернуться обратно</a>
+    	<a class="btn btn-success" href="http://localhost:3000/" role="button">Вернуться обратно</a>
        </  body>
 

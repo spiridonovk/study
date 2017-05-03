@@ -6,7 +6,7 @@
 
 <table class="table table-striped" border="1" >
    
-<h1>Таблица представления</h1>
+<h1>Спиксок гостей</h1>
 <p>Статус : <%= flash[:bad] %>  <%= flash[:good] %> <%=flash[:delet]%> </p>
  <tr>
         <th>id</th>
@@ -37,10 +37,13 @@
 
 <br>
 Добавь друга	
- <form action="/users/" method="post">
-   <p><input name="name" placeholder="Не менее 4"> <input  name="family" placeholder="Любое значение"></p>
-   <p><input type="submit" value="Добавить"></p>
-   
-  </form>
+
+ <%= form_for :user, url: users_path do |f| %>
+  <%= f.text_field :name %>
+  <%= f.text_field :family %>
+   <%= f.file_field :avatar %>
+  <%= f.submit "Create" %>
+<% end %>
+
 
 
