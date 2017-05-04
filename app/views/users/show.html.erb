@@ -5,7 +5,9 @@
  <body>
 
  <h1>Описание конкретного человека</h1>
+ <%= image_tag(@user.avatar_url(:thumb).to_s) %>
 <ul>
+
     <li> ID ----<%= @user[:id] %>  </li>
     <li>Имя ----<%= @user[:name] %> </li>
     <li>Фамилия ----<%= @user[:family] %></li>
